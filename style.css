@@ -1,10 +1,11 @@
 :root {
     --color1: #ffffff;
     --color2: #f5f5f5;
-    --color3: #000000;
+    --color3: rgb(15, 15, 15);
     --color4: rgb(95, 04, 170);
     --color5: #efa4a4;
     --color6: rgba(128, 128, 128, 0.25);
+    --color7: rgba(245, 245, 245, 0.8);
 }
 
 @font-face {
@@ -27,6 +28,7 @@ button {
     outline: none;
     cursor: pointer;
     border: 1px solid var(--color2);
+    color: var(--color1);
     text-transform: uppercase;
     font-weight: 700;
     transition: 0.4s ease;
@@ -108,3 +110,71 @@ nav li:last-child:before {
     padding: 8px 16px;
 }
 
+/* header */
+.main-header {
+    background: url(./assets/img/bg.jpg) fixed center/cover;
+    color: var(--color1);
+    padding: 60px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 30px 0 35px; /* en HAUT 30px, 0 GAUCHE/DROITE, 35px en BAS */
+}
+
+.main-header button {
+    padding: 15px 30px; /* 15px en HAUT/BAS, 30px GAUCHE/DROITE */
+    letter-spacing: 2px;
+}
+
+.header-text {
+    padding: 45px 0; /* 45px en HAUT/BAS, 0 GAUCHE/DROITE */
+    font-size: 1.2rem;
+    /* Et pour éviter que le paragraphe s'étende, on ajoute un max-width ! */
+    max-width: 1100px; /* 1100px de largeur max, l'élément qui est en block,  va se mettre à gauche et la marge se trouve à droite !  */
+    /* ON AJOUTE UN MARGIN 0 AUTO !  */
+    margin: 0 auto; /* Pour centrer le paragraphe */
+    line-height: 34px; /* un peu plus d'écart entre les lignes */
+}
+
+
+/* section icon-part */
+.icon-part {
+    /*** Pour que le background il s'étende sur toute la largeur de la page et on ne met oas de max-width ici ! ***/
+    background: var(--color3);
+    padding: 65px 0;
+    color: var(--color2);
+}
+
+.icon-part-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.lip-logo {
+    margin-bottom: 30px;
+}
+
+.icon-part h3{
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.icon-part p {
+    width: 80%;
+    margin: 10px auto 20px; /* 10px en HAUT, auto GAUCHE/DROITE, 20px en BAS */
+}
+
+.icon-part button {
+    padding: 9px 32px; /* 9px en HAUT/BAS, 32px GAUCHE/DROITE */
+}
+
+.news-part {
+    background: var(--color7);
+    padding: 80px 0 45px; /* 80px en HAUT, 0 GAUCHE/DROITE, 45px en BAS */
+}
