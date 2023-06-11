@@ -6,6 +6,7 @@
     --color5: #efa4a4;
     --color6: rgba(128, 128, 128, 0.25);
     --color7: rgba(245, 245, 245, 0.8);
+    --color8: rgba(0, 0, 0, 0.9);
 }
 
 @font-face {
@@ -177,4 +178,91 @@ h1 {
 .news-part {
     background: var(--color7);
     padding: 80px 0 45px; /* 80px en HAUT, 0 GAUCHE/DROITE, 45px en BAS */
+}
+/* Le header-news c'est le parent de "left-part" et "right-part" */
+.header-news {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+/* 1er enfant */
+.left-part {
+    line-height: 30px;
+}
+
+.left-part h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.left-part p {
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+/* 2ème enfant */
+.right-part button {
+    color: var(--color3);
+    border: 1px solid var(--color3);
+    letter-spacing: 1px;
+    padding: 10px 20px; /* 10px en HAUT/BAS, 20px GAUCHE/DROITE */
+}
+
+.right-part button:hover {
+    background: var(--color8);
+    color: var(--color2);
+}
+
+/* La partie main-news */
+.main-news-container {
+    display: flex;
+    justify-content: space-around;
+    /* Que ça ne s'étand pas jusqu'à l'infini ! */
+    max-width: 1100px;
+    margin: 45px auto;
+}
+
+/* On sélectionne un enfant direct */
+/* On sélectionne tout les enfants direct de cette div */
+.main-news-container > div {
+    position: relative;
+    width: 23%; 
+}
+
+.mn-pic img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 2px 10px #888;
+}
+
+.main-news-container h4 {
+    margin: 15px 0; /* 15px en HAUT/BAS, 0 GAUCHE/DROITE */
+    text-align: left;
+}
+
+.main-news-container p {
+    text-align: left;
+    font-size: 0.8rem;
+    line-height: 20px;
+    margin-bottom: 45px;
+}
+
+/* On va aligner en absolute les 3 liens avec aussi bottom : 0 */
+.link {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+}
+
+.main-news a {
+    text-transform: uppercase;
+    color: var(--color4);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    font-weight: 900;
 }
