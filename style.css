@@ -1,410 +1,481 @@
 :root {
-    --color1: #ffffff;
-    --color2: #f5f5f5;
-    --color3: rgb(15, 15, 15);
-    --color4: rgb(95, 04, 170);
-    --color5: #efa4a4;
-    --color6: rgba(128, 128, 128, 0.25);
-    --color7: rgba(245, 245, 245, 0.8);
-    --color8: rgba(0, 0, 0, 0.9);
-    --color9: #EBEBEB;
+  --color1: #ffffff;
+  --color2: #f5f5f5;
+  --color3: rgb(15, 15, 15);
+  --color4: rgb(95, 04, 170);
+  --color5: #efa4a4;
+  --color6: rgba(128, 128, 128, 0.25);
+  --color7: rgba(245, 245, 245, 0.8);
+  --color8: rgba(0, 0, 0, 0.9);
+  --color9: #ebebeb;
+  --color10: #000;
 }
 
+/********** FONT **********/
 @font-face {
-    font-family: "Montserrat";
-    src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf);
+  font-family: "Montserrat";
+  src: url(./assets/fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 /********** RESET Paramètre généraux **********/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
 }
 
 /* Dans la maquette tout les boutons ont le même style, réglages en communs ! */
 button {
-    background: transparent;
-    outline: none;
-    cursor: pointer;
-    border: 1px solid var(--color2);
-    color: var(--color1);
-    text-transform: uppercase;
-    font-weight: 700;
-    transition: 0.4s ease;
-    cursor: pointer;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid var(--color2);
+  color: var(--color1);
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 0.4s ease;
+  cursor: pointer;
 }
 
 button:hover {
-    color: var(--color3); 
-    background: var(--color2);
+  color: var(--color3);
+  background: var(--color2);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* body */
 /* Pour que tout soit centré au milieu */
 body {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* navigation */
 /* Ne doit pas s'étendre à l'infini */
 nav {
-    max-width: 1100px;
-    margin: 0 auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 /* Dans la navigation on s'occupe des ul */
 nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5px;
 }
 
 nav li {
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    position: relative;
-    transition: 0.3s ease;
-    padding: 20px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s ease;
+  padding: 20px 0;
 }
 
 /* Un effet lors du survole de la souris */
 nav li:first-child {
-    color: var(--color4);
+  color: var(--color4);
 }
 
 nav li:first-child:before {
-    content: "";
-    width: 100%;
-    height: 5px;
-    position: absolute;
-    background: var(--color4);
-    transform: translateY(-20px);
+  content: "";
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  background: var(--color4);
+  transform: translateY(-20px);
 }
 
 /* Quand on survole un li */
 nav li:hover:before {
-    content: "";
-    width: 100%;
-    height: 5px;
-    position: absolute;
-    background: var(--color4);
-    transform: translateY(-20px);
+  content: "";
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  background: var(--color4);
+  transform: translateY(-20px);
 }
 
 /* Quand on survole le dernier li */
 nav li:last-child:before {
-    background: none;
+  background: none;
 }
 #language {
-    background: var(--color6);
-    border-radius: 50px;
-    padding: 8px 16px;
+  background: var(--color6);
+  border-radius: 50px;
+  padding: 8px 16px;
 }
 
 /* header */
 .main-header {
-    background: url(./assets/img/bg.jpg) fixed center/cover;
-    color: var(--color1);
-    padding: 60px;
+  background: url(./assets/img/bg.jpg) fixed center/cover;
+  color: var(--color1);
+  padding: 60px;
 }
 
 h1 {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin: 30px 0 35px; /* en HAUT 30px, 0 GAUCHE/DROITE, 35px en BAS */
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 30px 0 35px; /* en HAUT 30px, 0 GAUCHE/DROITE, 35px en BAS */
 }
 
 .main-header button {
-    padding: 15px 30px; /* 15px en HAUT/BAS, 30px GAUCHE/DROITE */
-    letter-spacing: 2px;
+  padding: 15px 30px; /* 15px en HAUT/BAS, 30px GAUCHE/DROITE */
+  letter-spacing: 2px;
+}
+
+.main-header i {
+  transform: translateX(5px); /* Décaler l'icône de 5px vers la droite */
 }
 
 .header-text {
-    padding: 45px 0; /* 45px en HAUT/BAS, 0 GAUCHE/DROITE */
-    font-size: 1.2rem;
-    /* Et pour éviter que le paragraphe s'étende, on ajoute un max-width ! */
-    max-width: 1100px; /* 1100px de largeur max, l'élément qui est en block,  va se mettre à gauche et la marge se trouve à droite !  */
-    /* ON AJOUTE UN MARGIN 0 AUTO !  */
-    margin: 0 auto; /* Pour centrer le paragraphe */
-    line-height: 34px; /* un peu plus d'écart entre les lignes */
+  padding: 45px 0; /* 45px en HAUT/BAS, 0 GAUCHE/DROITE */
+  font-size: 1.2rem;
+  /* Et pour éviter que le paragraphe s'étende, on ajoute un max-width ! */
+  max-width: 1100px; /* 1100px de largeur max, l'élément qui est en block,  va se mettre à gauche et la marge se trouve à droite !  */
+  /* ON AJOUTE UN MARGIN 0 AUTO !  */
+  margin: 0 auto; /* Pour centrer le paragraphe */
+  line-height: 34px; /* un peu plus d'écart entre les lignes */
 }
-
 
 /* section icon-part */
 .icon-part {
-    /*** Pour que le background il s'étende sur toute la largeur de la page et on ne met oas de max-width ici ! ***/
-    background: var(--color3);
-    padding: 65px 0;
-    color: var(--color2);
+  /*** Pour que le background il s'étende sur toute la largeur de la page et on ne met oas de max-width ici ! ***/
+  background: var(--color3);
+  padding: 65px 0;
+  color: var(--color2);
 }
 
 .icon-part-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .lip-logo {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
-.icon-part h3{
-    text-transform: uppercase;
-    font-weight: 700;
+.icon-part h3 {
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .icon-part p {
-    width: 80%;
-    margin: 10px auto 20px; /* 10px en HAUT, auto GAUCHE/DROITE, 20px en BAS */
+  width: 80%;
+  margin: 10px auto 20px; /* 10px en HAUT, auto GAUCHE/DROITE, 20px en BAS */
 }
 
 .icon-part button {
-    padding: 9px 32px; /* 9px en HAUT/BAS, 32px GAUCHE/DROITE */
+  padding: 9px 32px; /* 9px en HAUT/BAS, 32px GAUCHE/DROITE */
 }
 
 .news-part {
-    background: var(--color7);
-    padding: 80px 0 45px; /* 80px en HAUT, 0 GAUCHE/DROITE, 45px en BAS */
+  background: var(--color7);
+  padding: 80px 0 45px; /* 80px en HAUT, 0 GAUCHE/DROITE, 45px en BAS */
 }
 /* Le header-news c'est le parent de "left-part" et "right-part" */
 .header-news {
-    display: grid;
-    grid-template-columns: 70% 30%;
-    max-width: 1000px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 /* 1er enfant */
 .left-part {
-    line-height: 30px;
+  line-height: 30px;
 }
 
 .left-part h2 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-    text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-align: left;
 }
 
 .left-part p {
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: left;
 }
 
 /* 2ème enfant */
 .right-part button {
-    color: var(--color3);
-    border: 1px solid var(--color3);
-    letter-spacing: 1px;
-    padding: 10px 20px; /* 10px en HAUT/BAS, 20px GAUCHE/DROITE */
+  color: var(--color10);
+  border: 1px solid var(--color10);
+  letter-spacing: 1px;
+  padding: 10px 20px; /* 10px en HAUT/BAS, 20px GAUCHE/DROITE */
 }
 
 .right-part button:hover {
-    background: var(--color8);
-    color: var(--color2);
+  background: var(--color8);
+  color: var(--color2);
 }
 
 /* La partie main-news */
 .main-news-container {
-    display: flex;
-    justify-content: space-around;
-    /* Que ça ne s'étand pas jusqu'à l'infini ! */
-    max-width: 1100px;
-    margin: 45px auto;
+  display: flex;
+  justify-content: space-around;
+  /* Que ça ne s'étand pas jusqu'à l'infini ! */
+  max-width: 1100px;
+  margin: 45px auto;
 }
 
 /* On sélectionne un enfant direct */
 /* On sélectionne tout les enfants direct de cette div */
 .main-news-container > div {
-    position: relative;
-    width: 23%; 
+  position: relative;
+  max-width: 23%; /*** 23% de la largeur de son parent ***/
 }
 
 .mn-pic img {
-    object-fit: cover;
-    width: 100%;
-    border-radius: 3px;
-    box-shadow: 0 2px 10px #888;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 2px 10px #888;
 }
 
 .main-news-container h4 {
-    margin: 15px 0; /* 15px en HAUT/BAS, 0 GAUCHE/DROITE */
-    text-align: left;
+  margin: 15px 0; /* 15px en HAUT/BAS, 0 GAUCHE/DROITE */
+  text-align: left;
 }
 
 .main-news-container p {
-    text-align: left;
-    font-size: 0.8rem;
-    line-height: 20px;
-    margin-bottom: 45px;
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 20px;
+  margin-bottom: 45px;
 }
 
 /* On va aligner en absolute les 3 liens avec aussi bottom : 0 */
 .link {
-    text-align: left;
-    position: absolute;
-    bottom: 0;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
 }
 
 .main-news a {
-    text-transform: uppercase;
-    color: var(--color4);
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color4);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  font-weight: 900;
 }
 
 .main-news a:hover {
-    color: var(--color3);
+  color: var(--color3);
 }
 
 /* Décaler légèrement et uniquement ces 3 chevrons */
 .main-news i {
-    transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 /* PARTIE CONTACT */
 .contact {
-    padding: 65px 0 20px; /* 65px en HAUT, 0 GAUCHE/DROITE, 20px en BAS */
-    /* Pour pas que ça s'étande sur les cotés */
-    max-width: 1100px; /* Et ne pas oublier un margin: 0 auto pour le centrer */
-    margin: 0 auto;
+  padding: 65px 0 20px; /* 65px en HAUT, 0 GAUCHE/DROITE, 20px en BAS */
+  /* Pour pas que ça s'étande sur les cotés */
+  max-width: 1100px; /* Et ne pas oublier un margin: 0 auto pour le centrer */
+  margin: 0 auto;
 }
 
 /* Le parent: contact-list de ces 4 élements ( "list" ) */
 .contact-list {
-    display: flex;
-    justify-content: space-around;
-    font-weight: 400;
-    position: relative; /* Pour que le pseudo élément soit positionné par rapport à ce parent */
+  display: flex;
+  justify-content: space-around;
+  font-weight: 400;
+  position: relative; /* Pour que le pseudo élément soit positionné par rapport à ce parent */
 }
 
 /*** Pseudo élément pour la barre ***/
 .contact-list:after {
-    content: "";
-    position: absolute;
-    width: 80%;
-    height: 1px;
-    background: var(--color9);
-    /* positionner la barre vers le bas */
-    bottom: -28px;
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background: var(--color9);
+  /* positionner la barre vers le bas */
+  bottom: -28px;
 }
 
 /* On va mettre les 4 éléments à la bonne taille ! */
 .contact-list .list {
-    text-align: left;
-    width: 24%; /* 24% de la largeur du parent, chaque division à la même taille */
+  text-align: left;
+  width: 24%; /* 24% de la largeur du parent, chaque division à la même taille */
 }
 
 /* On va centrer l'image */
 /* Mettre l'image en display: block */
 #contact-img img {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .contact-list h5 {
-    text-transform: uppercase;
-    font-size: 1rem;
-    margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
 .infos-p li {
-    margin: 15px 0; /* 15px en HAUT/BAS, 0 GAUCHE/DROITE */
+  margin: 15px 0; /* 15px en HAUT/BAS, 0 GAUCHE/DROITE */
 }
 
 .list p {
-    line-height: 22px;
-    margin-bottom: 15px;
+  line-height: 22px;
+  margin-bottom: 15px;
 }
 
 .list h6 {
-    font-size: 0.8rem;
-    margin-bottom: 8px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
 }
 
 .list .network {
-    margin: 20px 0 8px; /* 20px en HAUT, 0 GAUCHE/DROITE, 8px en BAS */
+  margin: 20px 0 8px; /* 20px en HAUT, 0 GAUCHE/DROITE, 8px en BAS */
 }
 
 .footer-logos i {
-    font-size: 0.8rem;
-    margin: 0 12px 30px 0; /* 0 en HAUT, 12px DROITE, 30px BAS, 0 GAUCHE */
+  font-size: 0.8rem;
+  margin: 0 12px 30px 0; /* 0 en HAUT, 12px DROITE, 30px BAS, 0 GAUCHE */
 }
 
 .copyright {
-    margin: 0; 
+  margin: 0;
 }
 
 .contact-medias {
-    padding: 60px 0 15px; /* 60px en HAUT, 0 GAUCHE/DROITE, 15px en BAS */
-    display: flex;
-    align-items: center;
-    width: 95%;
-    margin: 0 auto;
+  padding: 60px 0 15px; /* 60px en HAUT, 0 GAUCHE/DROITE, 15px en BAS */
+  display: flex;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .medias-text {
-    text-align: left;
-    width: 30%;
+  text-align: left;
+  width: 30%;
 }
 
 .medias-text h3 {
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
 }
 
 .medias-text p {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .medias-logos {
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
 }
 
 /*** On va mettre les logos à la bonne taille ***/
 /* Mettre des règles quand la page sera trop petite */
 .medias-logos img {
-    width: 60px;
+  width: 60px;
 }
 /* LA PARTIE FOOTER */
 /* LA PARTIE DES PARTENAIRES OFFICIELS */
 footer {
-    background: var(--color3);
-    color: var(--color2);
-    padding: 25px; /* 25px en HAUT/DROITE/EN BAS/GAUCHE */
+  background: var(--color3);
+  color: var(--color2);
+  padding: 25px; /* 25px en HAUT/DROITE/EN BAS/GAUCHE */
 }
 
 footer h3 {
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-bottom: 32px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 32px;
 }
 
 /* On va aligner les logos */
 footer ul {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1000px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+/* On met des règles ! */
+/* ********** MEDIA QUERIES ********** */
+@media screen and (max-width: 895px) {
+  nav li {
+    font-size: 0.7rem;
+  }
+  .main-header img {
+    width: 60%;
+  }
+  .contact-list .list {
+    padding-left: 15px;
+  }
+  .medias-logos img {
+    width: 40px;
+  }
+  footer ul {
+    flex-wrap: wrap;
+  }
+  footer li {
+    margin: 5px;
+  }
+}
 
+@media screen and (max-width: 704px) {
+  nav li {
+    display: none;
+  }
+  /*** Pour les afficher les uns en dessous des autres : en display: block ! ***/
+  .icon-part-container {
+    display: block;
+  }
+  .icon-part {
+    padding: 0 0 30px;
+  }
+  .list-icon-part {
+    margin-top: 40px;
+  }
+  .header-news {
+    display: block;
+  }
 
+  .left-part {
+    width: 100%;
+  }
+  .left-part h2 {
+    text-align: center;
+  }
+  .left-part p {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  /* On met les un en dessous des autres ! */
+  .main-news-container {
+    display: block;
+  }
+  .main-news-container div {
+    max-width: 90%;
+    margin: 0 auto; /* Pour centrer */
+    padding-bottom: 15px;
+    margin-top: 58px;
+  }
+  .main-news-container img {
+    width: 50%;
+  }
+  .contact {
+    display: none;
+  }
+}
