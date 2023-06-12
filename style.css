@@ -7,6 +7,7 @@
     --color6: rgba(128, 128, 128, 0.25);
     --color7: rgba(245, 245, 245, 0.8);
     --color8: rgba(0, 0, 0, 0.9);
+    --color9: #EBEBEB;
 }
 
 @font-face {
@@ -292,14 +293,15 @@ h1 {
     position: relative; /* Pour que le pseudo élément soit positionné par rapport à ce parent */
 }
 
+/*** Pseudo élément pour la barre ***/
 .contact-list:after {
     content: "";
     position: absolute;
     width: 80%;
     height: 1px;
-    background: var(--color3);
+    background: var(--color9);
     /* positionner la barre vers le bas */
-    bottom: -40px;
+    bottom: -28px;
 }
 
 /* On va mettre les 4 éléments à la bonne taille ! */
@@ -348,10 +350,61 @@ h1 {
     margin: 0; 
 }
 
+.contact-medias {
+    padding: 60px 0 15px; /* 60px en HAUT, 0 GAUCHE/DROITE, 15px en BAS */
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
 
+.medias-text {
+    text-align: left;
+    width: 30%;
+}
 
+.medias-text h3 {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.medias-text p {
+    font-size: 0.8rem;
+}
+
+.medias-logos {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+/*** On va mettre les logos à la bonne taille ***/
+/* Mettre des règles quand la page sera trop petite */
+.medias-logos img {
+    width: 60px;
+}
+/* LA PARTIE FOOTER */
 /* LA PARTIE DES PARTENAIRES OFFICIELS */
+footer {
+    background: var(--color3);
+    color: var(--color2);
+    padding: 25px; /* 25px en HAUT/DROITE/EN BAS/GAUCHE */
+}
 
+footer h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+/* On va aligner les logos */
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
 
 
